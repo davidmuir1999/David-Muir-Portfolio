@@ -1,7 +1,13 @@
+"use client"
+
 import { Mail, FileText, ExternalLink, Code2 } from "lucide-react";
 import { ReactiveAvatar } from "@/src/components/ReactiveAvatar";
+import { CVModal } from "@/src/components/CVModal";
+import { useState } from "react";
+import {motion} from 'framer-motion'
 
 export default function Portfolio() {
+  const [isCVModalOpen, setIsCVModalOpen] = useState(false);
   const GithubIcon = ({ size = 24, className = "" }) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -62,29 +68,31 @@ export default function Portfolio() {
 
         <div className="flex gap-4 justify-center items-center">
           <a
-            href="#"
+            href="https://www.github.com/davidmuir1999"
+            target="_blank"
             className="p-2 text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors"
           >
             <GithubIcon size={20} />
           </a>
           <a
-            href="#"
+            href="https://www.linkedin.com/in/david-muir-07b41a193/"
+            target="_blank"
             className="p-2 text-slate-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
           >
             <LinkedinIcon size={20} />
           </a>
           <a
-            href="#"
+            href="mailto:davidmuir1999@gmail.com"
             className="p-2 text-slate-500 hover:text-red-500 dark:hover:text-red-400 transition-colors"
           >
             <Mail size={20} />
           </a>
-          <a
-            href="#"
-            className="flex items-center gap-2 px-4 py-2 bg-slate-900 text-white dark:bg-white dark:text-slate-900 rounded-md text-sm font-medium hover:bg-slate-800 dark:hover:bg-slate-200 transition-colors"
+          <button
+            onClick={() => setIsCVModalOpen(true)}
+            className="flex items-center gap-2 px-4 py-2 bg-slate-900 text-white dark:bg-white dark:text-slate-900 rounded-md text-sm font-medium hover:bg-slate-800 dark:hover:bg-slate-200 transition-colors shadow-sm cursor-pointer"
           >
             <FileText size={16} /> CV
-          </a>
+          </button>
         </div>
       </aside>
 
@@ -223,7 +231,8 @@ export default function Portfolio() {
 
           <div className="space-y-12 border-l-2 border-slate-200 dark:border-slate-800 pl-6 ml-3">
             <div className="relative">
-            <div className="absolute w-3 h-3 bg-blue-500 rounded-full -left-[31px] top-1.5 ring-4 ring-slate-50 dark:ring-slate-950 shadow-[0_0_10px_rgba(59,130,246,0.8)]" />              <h4 className="text-lg font-bold text-slate-900 dark:text-slate-100">
+              <div className="absolute w-3 h-3 bg-blue-500 rounded-full -left-[31px] top-1.5 ring-4 ring-slate-50 dark:ring-slate-950 shadow-[0_0_10px_rgba(59,130,246,0.8)]" />{" "}
+              <h4 className="text-lg font-bold text-slate-900 dark:text-slate-100">
                 Software Engineer
               </h4>
               <h5 className="text-sm font-medium text-blue-600 dark:text-blue-400 mb-3">
@@ -290,6 +299,11 @@ export default function Portfolio() {
         </section>
 
         <div className="h-24"></div>
+
+        <CVModal
+          isOpen={isCVModalOpen}
+          onClose={() => setIsCVModalOpen(false)}
+        />
       </main>
     </div>
   );

@@ -41,22 +41,23 @@ export default function Portfolio() {
 
   return (
     <div className="min-h-screen flex flex-col lg:flex-row w-full bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-50 transition-colors duration-300">
-      <aside className="w-full lg:w-[30%] lg:fixed lg:top-0 lg:left-0 lg:h-screen p-8 lg:p-12 xl:p-16 flex flex-col justify-center overflow-y-auto">
+      <aside className="w-full lg:w-[30%] lg:fixed lg:top-0 lg:left-0 lg:h-screen p-8 lg:p-12 xl:p-16 flex flex-col justify-center overflow-y-auto z-10">
         <ReactiveAvatar />
 
-        <div className="text-center mb-6">
+        <div className="text-center mb-6 mt-4">
           <h1 className="text-4xl font-extrabold tracking-tight mb-2">
             David Muir
           </h1>
-          <h2 className="text-lg font-medium text-blue-600 dark:text-blue-400">
-            Software Engineer
-          </h2>
+          <h3 className="text-3xl font-extrabold tracking-tight mb-6 bg-linear-to-r from-slate-100 to-slate-500 dark:from-slate-100 dark:to-slate-400 bg-clip-text text-transparent">
+            Engineering precision. Full-stack execution.
+          </h3>
         </div>
 
         <p className="text-center text-sm text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
-          Specializing in complex state management, clinical UIs, and
-          enterprise-grade web applications. Architect of the Vital Link EHR
-          system.
+          Building complex web applications from the database to the DOM. I
+          combine a Master's in Biomedical Engineering with modern full-stack
+          development to ship secure, enterprise-grade software for health-tech
+          and corporate finance.
         </p>
 
         <div className="flex gap-4 justify-center items-center">
@@ -87,17 +88,24 @@ export default function Portfolio() {
         </div>
       </aside>
 
-      <main className="w-full lg:w-[70%] lg:ml-[30%] p-8 lg:p-16 xl:p-24 min-h-screen flex flex-col gap-24">
+      <main className="w-full lg:w-[70%] lg:ml-[30%] p-8 lg:p-16 xl:p-24 min-h-screen flex flex-col gap-24 relative">
         <section className="max-w-2xl mt-12 lg:mt-24">
           <h3 className="text-3xl font-bold tracking-tight mb-6">
-            Building systems that matter.
+            Engineering precision. Full-stack execution.
           </h3>
+          <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+            My foundation in Biomedical Engineering taught me rigorous
+            analytical precision; my software career taught me how to ship it.
+            Whether I am architecting GDPR-compliant systems for corporate
+            finance, prototyping health tech with Meta and Google, or building
+            clinical UIs for the NHS, my focus is identical: write clean,
+            scalable code that eliminates operational bottlenecks.
+          </p>
           <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
-            I don't just write code; I engineer solutions to operational
-            bottlenecks. By collaborating directly with end-users—from NHS
-            clinical staff to site managers—I build highly responsive,
-            data-secure web applications that handle complex business logic
-            without sacrificing user experience.
+            I specialise in bridging the gap between complex business logic and
+            intuitive user experience. I don't just clear tickets; I partner
+            directly with end-users to build secure, highly accessible, and
+            performant web applications that deliver immediate business value.
           </p>
         </section>
 
@@ -109,14 +117,15 @@ export default function Portfolio() {
             </span>
           </div>
 
-          <div className="w-full aspect-video bg-slate-200 dark:bg-slate-800 rounded-xl mb-8 flex items-center justify-center text-slate-400 shadow-sm">
-            [High-Res Dashboard Screenshot]
+          <div className="w-full aspect-video bg-slate-200 dark:bg-slate-800 rounded-xl mb-8 flex items-center justify-center text-slate-400 shadow-sm border border-slate-300 dark:border-slate-800">
+            [High-Res Dashboard Screenshot or GIF]
           </div>
 
           <p className="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
-            A real-time Electronic Health Record (EHR) and hospital bed
-            management system. Engineered to solve actual clinical bottlenecks
-            in the patient admission-to-discharge workflow.
+            An all-in-one operational ecosystem and Electronic Health Record
+            (EHR) platform. I built this by directly interviewing practicing NHS
+            doctors and nurses to identify points of friction in the patient
+            admission-to-discharge workflow.
           </p>
 
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 text-sm text-slate-700 dark:text-slate-300">
@@ -125,16 +134,23 @@ export default function Portfolio() {
               Scoring
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-blue-500">▹</span> Real-time WebSockets via
-              Supabase
+              <span className="text-blue-500">▹</span> Live Bed Bureau via
+              Supabase WebSockets
             </li>
             <li className="flex items-start gap-2">
               <span className="text-blue-500">▹</span> Strict Role-Based Access
               Control (RBAC)
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-blue-500">▹</span> Mobile-First CSS Grid
-              Architecture
+              <span className="text-blue-500">▹</span> Mitigated UI Race
+              Conditions via strict State Management
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-blue-500">▹</span> Automated Patient Triage
+              Algorithm
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-blue-500">▹</span> Modern and Intuitive UI
             </li>
           </ul>
 
@@ -158,41 +174,117 @@ export default function Portfolio() {
           <h3 className="text-2xl font-bold tracking-tight mb-8">
             Technical Arsenal
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="space-y-4">
-              <h4 className="font-semibold text-slate-900 dark:text-slate-100">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="p-6 rounded-xl bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 transition-colors shadow-sm">
+              <h4 className="font-semibold text-slate-900 dark:text-slate-100 mb-4 flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-blue-500"></span>{" "}
                 Frontend
               </h4>
-              <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-400">
-                <li>Next.js (App Router)</li>
-                <li>React 18</li>
-                <li>Tailwind CSS</li>
-                <li>Framer Motion</li>
+              <ul className="space-y-3 text-sm text-slate-600 dark:text-slate-400">
+                <li>React & Next.js (SSR / SSG)</li>
+                <li>State Management (Redux)</li>
+                <li>TypeScript & JavaScript</li>
+                <li>Tailwind CSS & Shadcn UI</li>
               </ul>
             </div>
 
-            <div className="space-y-4">
-              <h4 className="font-semibold text-slate-900 dark:text-slate-100">
+            <div className="p-6 rounded-xl bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 transition-colors shadow-sm">
+              <h4 className="font-semibold text-slate-900 dark:text-slate-100 mb-4 flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-emerald-500"></span>{" "}
                 Backend & Data
               </h4>
-              <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-400">
-                <li>PostgreSQL</li>
-                <li>Supabase (Auth & Realtime)</li>
-                <li>Prisma ORM</li>
-                <li>Zod Validation</li>
+              <ul className="space-y-3 text-sm text-slate-600 dark:text-slate-400">
+                <li>C# (.NET) & Node.js</li>
+                <li>PostgreSQL & Supabase</li>
+                <li>Prisma ORM & GraphQL</li>
+                <li>Enterprise Auth (NextAuth)</li>
               </ul>
             </div>
 
-            <div className="space-y-4">
-              <h4 className="font-semibold text-slate-900 dark:text-slate-100">
-                Testing & DevOps
+            <div className="p-6 rounded-xl bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 transition-colors shadow-sm">
+              <h4 className="font-semibold text-slate-900 dark:text-slate-100 mb-4 flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-purple-500"></span>{" "}
+                Architecture
               </h4>
-              <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-400">
-                <li>Playwright E2E</li>
-                <li>Jest Unit Testing</li>
-                <li>GitHub Actions (CI/CD)</li>
-                <li>Vercel Deployment</li>
+              <ul className="space-y-3 text-sm text-slate-600 dark:text-slate-400">
+                <li>Playwright (E2E) & Jest</li>
+                <li>Azure DevOps & Vercel</li>
+                <li>WCAG Accessibility</li>
+                <li>MHRA & GDPR Compliance</li>
               </ul>
+            </div>
+          </div>
+        </section>
+
+        <section className="max-w-3xl">
+          <h3 className="text-2xl font-bold tracking-tight mb-8">
+            The Journey
+          </h3>
+
+          <div className="space-y-12 border-l-2 border-slate-200 dark:border-slate-800 pl-6 ml-3">
+            <div className="relative">
+            <div className="absolute w-3 h-3 bg-blue-500 rounded-full -left-[31px] top-1.5 ring-4 ring-slate-50 dark:ring-slate-950 shadow-[0_0_10px_rgba(59,130,246,0.8)]" />              <h4 className="text-lg font-bold text-slate-900 dark:text-slate-100">
+                Software Engineer
+              </h4>
+              <h5 className="text-sm font-medium text-blue-600 dark:text-blue-400 mb-3">
+                Hymans Robertson
+              </h5>
+              <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                Engineered heavily regulated pension service applications and ID
+                verification systems within the corporate financial sector.
+                Enforced strict GDPR compliance and WCAG accessibility
+                standards. Spearheaded Kaizen process improvements that
+                successfully modernized legacy pipelines, implemented site
+                analytics, and drastically reduced deployment bugs.
+              </p>
+            </div>
+
+            <div className="relative">
+              <div className="absolute w-3 h-3 bg-slate-300 dark:bg-slate-700 rounded-full -left-[31px] top-1.5 ring-4 ring-slate-50 dark:ring-slate-950" />
+              <h4 className="text-lg font-bold text-slate-900 dark:text-slate-100">
+                Full Stack Developer
+              </h4>
+              <h5 className="text-sm font-medium text-slate-500 mb-3">
+                Independent / Consulting
+              </h5>
+              <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                Identified systemic technological gaps in local brick-and-mortar
+                businesses and built proprietary SaaS inventory applications to
+                replace their legacy management. Delivered high-visibility,
+                brand-centric web solutions for high-profile clients, including
+                an MTV Top 10 musician.
+              </p>
+            </div>
+
+            <div className="relative">
+              <div className="absolute w-3 h-3 bg-slate-300 dark:bg-slate-700 rounded-full -left-[31px] top-1.5 ring-4 ring-slate-50 dark:ring-slate-950" />
+              <h4 className="text-lg font-bold text-slate-900 dark:text-slate-100">
+                Software & Mechanical Engineer
+              </h4>
+              <h5 className="text-sm font-medium text-slate-500 mb-3">
+                Novosound
+              </h5>
+              <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                Transitioned from an intern to a full-time engineer at a leading
+                medical ultrasound startup. Developed proprietary frontend
+                interfaces and collaborated directly with top-tier technology
+                partners, including Meta and Google, to deliver advanced health
+                tech solutions.
+              </p>
+            </div>
+
+            <div className="relative">
+              <div className="absolute w-3 h-3 bg-slate-300 dark:bg-slate-700 rounded-full -left-[31px] top-1.5 ring-4 ring-slate-50 dark:ring-slate-950" />
+              <h4 className="text-lg font-bold text-slate-900 dark:text-slate-100">
+                MEng Biomedical Engineering (Distinction)
+              </h4>
+              <h5 className="text-sm font-medium text-slate-500 mb-3">
+                University Graduate
+              </h5>
+              <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                Focused research and development on engineering solutions
+                specifically tailored for the medical device industry.
+              </p>
             </div>
           </div>
         </section>

@@ -10,7 +10,6 @@ interface CVModalProps {
 }
 
 export function CVModal({ isOpen, onClose }: CVModalProps) {
-  // Lock body scroll when modal is open
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
@@ -22,7 +21,6 @@ export function CVModal({ isOpen, onClose }: CVModalProps) {
     };
   }, [isOpen]);
 
-  // Close on Escape key
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
@@ -36,7 +34,6 @@ export function CVModal({ isOpen, onClose }: CVModalProps) {
       {isOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center px-4">
           
-          {/* Backdrop */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -45,7 +42,6 @@ export function CVModal({ isOpen, onClose }: CVModalProps) {
             className="absolute inset-0 bg-slate-900/60 backdrop-blur-sm"
           />
 
-          {/* Modal Content */}
           <motion.div
             initial={{ opacity: 0, y: 50, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}

@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
 import { Mail, FileText, ExternalLink, Code2 } from "lucide-react";
 import { ReactiveAvatar } from "@/src/components/ReactiveAvatar";
 import { CVModal } from "@/src/components/CVModal";
 import { useState } from "react";
-import {motion} from 'framer-motion'
+import { motion } from "framer-motion";
 
 export default function Portfolio() {
   const [isCVModalOpen, setIsCVModalOpen] = useState(false);
@@ -105,7 +105,7 @@ export default function Portfolio() {
             My foundation in Biomedical Engineering taught me rigorous
             analytical precision; my software career taught me how to ship it.
             Whether I am architecting GDPR-compliant systems for corporate
-            finance, prototyping health tech with Meta and Google, or building
+            finance, prototyping health tech with FAANG companies, or building
             clinical UIs for the NHS, my focus is identical: write clean,
             scalable code that eliminates operational bottlenecks.
           </p>
@@ -125,8 +125,19 @@ export default function Portfolio() {
             </span>
           </div>
 
-          <div className="w-full aspect-video bg-slate-200 dark:bg-slate-800 rounded-xl mb-8 flex items-center justify-center text-slate-400 shadow-sm border border-slate-300 dark:border-slate-800">
-            [High-Res Dashboard Screenshot or GIF]
+          <div className="w-full bg-slate-200 dark:bg-slate-800 rounded-xl mb-8 shadow-sm border border-slate-300 dark:border-slate-800 overflow-hidden relative group">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-auto block"
+            >
+              <source src="/vital-link-demo.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+
+            <div className="absolute inset-0 bg-slate-900/10 group-hover:bg-transparent transition-colors duration-500 pointer-events-none" />
           </div>
 
           <p className="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
@@ -164,13 +175,15 @@ export default function Portfolio() {
 
           <div className="flex gap-4">
             <a
-              href="#"
+              href="https://vitallinkapp.com"
+              target="_blank"
               className="flex items-center gap-2 px-5 py-2.5 bg-blue-600 text-white rounded-md text-sm font-medium hover:bg-blue-700 transition-colors shadow-sm"
             >
               <ExternalLink size={16} /> Live Demo
             </a>
             <a
-              href="#"
+              href="https://github.com/davidmuir1999/Vital-Link-Triage-Project"
+              target="_blank"
               className="flex items-center gap-2 px-5 py-2.5 border border-slate-300 dark:border-slate-700 rounded-md text-sm font-medium hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
             >
               <Code2 size={16} /> Source Code
@@ -231,7 +244,11 @@ export default function Portfolio() {
 
           <div className="space-y-12 border-l-2 border-slate-200 dark:border-slate-800 pl-6 ml-3">
             <div className="relative">
-              <div className="absolute w-3 h-3 bg-blue-500 rounded-full -left-[31px] top-1.5 ring-4 ring-slate-50 dark:ring-slate-950 shadow-[0_0_10px_rgba(59,130,246,0.8)]" />{" "}
+              <div className="absolute -left-7.75 top-1.5 flex h-3 w-3">
+                <span className="absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75 animate-ping" />
+                <span className="relative inline-flex h-3 w-3 rounded-full bg-blue-500 ring-4 ring-slate-50 dark:ring-slate-950 shadow-[0_0_10px_rgba(59,130,246,0.8)]" />
+              </div>
+
               <h4 className="text-lg font-bold text-slate-900 dark:text-slate-100">
                 Software Engineer
               </h4>
@@ -249,7 +266,7 @@ export default function Portfolio() {
             </div>
 
             <div className="relative">
-              <div className="absolute w-3 h-3 bg-slate-300 dark:bg-slate-700 rounded-full -left-[31px] top-1.5 ring-4 ring-slate-50 dark:ring-slate-950" />
+              <div className="absolute w-3 h-3 bg-slate-300 dark:bg-slate-700 rounded-full -left-7.75 top-1.5 ring-4 ring-slate-50 dark:ring-slate-950" />
               <h4 className="text-lg font-bold text-slate-900 dark:text-slate-100">
                 Full Stack Developer
               </h4>
@@ -266,12 +283,12 @@ export default function Portfolio() {
             </div>
 
             <div className="relative">
-              <div className="absolute w-3 h-3 bg-slate-300 dark:bg-slate-700 rounded-full -left-[31px] top-1.5 ring-4 ring-slate-50 dark:ring-slate-950" />
+              <div className="absolute w-3 h-3 bg-slate-300 dark:bg-slate-700 rounded-full -left-7.75 top-1.5 ring-4 ring-slate-50 dark:ring-slate-950" />
               <h4 className="text-lg font-bold text-slate-900 dark:text-slate-100">
                 Software & Mechanical Engineer
               </h4>
               <h5 className="text-sm font-medium text-slate-500 mb-3">
-                Novosound
+                Novosound Ltd
               </h5>
               <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                 Transitioned from an intern to a full-time engineer at a leading
@@ -283,12 +300,27 @@ export default function Portfolio() {
             </div>
 
             <div className="relative">
-              <div className="absolute w-3 h-3 bg-slate-300 dark:bg-slate-700 rounded-full -left-[31px] top-1.5 ring-4 ring-slate-50 dark:ring-slate-950" />
+              <div className="absolute w-3 h-3 bg-slate-300 dark:bg-slate-700 rounded-full -left-7.75 top-1.5 ring-4 ring-slate-50 dark:ring-slate-950" />
+              <h4 className="text-lg font-bold text-slate-900 dark:text-slate-100">
+                C# Developer
+              </h4>
+              <h5 className="text-sm font-medium text-slate-500 mb-3">
+                University of Strathclyde Internship Program
+              </h5>
+              <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                Engineered real-time Unity (C#) simulations of robotic dental
+                surgeries, creating high-fidelity digital twins of live physical
+                procedures and anatomical models.
+              </p>
+            </div>
+
+            <div className="relative">
+              <div className="absolute w-3 h-3 bg-slate-300 dark:bg-slate-700 rounded-full -left-7.75 top-1.5 ring-4 ring-slate-50 dark:ring-slate-950" />
               <h4 className="text-lg font-bold text-slate-900 dark:text-slate-100">
                 MEng Biomedical Engineering (Distinction)
               </h4>
               <h5 className="text-sm font-medium text-slate-500 mb-3">
-                University Graduate
+                University of Strathclyde
               </h5>
               <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                 Focused research and development on engineering solutions

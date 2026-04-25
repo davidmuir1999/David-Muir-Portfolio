@@ -55,15 +55,15 @@ export default function Portfolio() {
             David Muir
           </h1>
           <h3 className="text-3xl font-extrabold tracking-tight mb-6 bg-linear-to-r from-slate-100 to-slate-500 dark:from-slate-100 dark:to-slate-400 bg-clip-text text-transparent">
-            Engineering precision. Full-stack execution.
+            Architecting resilient systems for high-stakes environments.
           </h3>
         </div>
 
         <p className="text-center text-sm text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
-          Building complex web applications from the database to the DOM. I
-          combine a Master's in Biomedical Engineering with modern full-stack
-          development to ship secure, enterprise-grade software for health-tech
-          and corporate finance.
+          Combining deep analytical rigor from a Master's in Biomedical
+          Engineering with modern full-stack development to ship secure,
+          enterprise-grade software for highly regulated industries like
+          HealthTech and FinTech.
         </p>
 
         <div className="flex gap-4 justify-center items-center">
@@ -99,21 +99,21 @@ export default function Portfolio() {
       <main className="w-full lg:w-[70%] lg:ml-[30%] p-8 lg:p-16 xl:p-24 min-h-screen flex flex-col gap-24 relative">
         <section className="max-w-2xl mt-12 lg:mt-24">
           <h3 className="text-3xl font-bold tracking-tight mb-6">
-            Engineering precision. Full-stack execution.
+            Architecting for Compliance, Scale, and the End-User.
           </h3>
           <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
-            My foundation in Biomedical Engineering taught me rigorous
-            analytical precision; my software career taught me how to ship it.
-            Whether I am architecting GDPR-compliant systems for corporate
-            finance, prototyping health tech with FAANG companies, or building
-            clinical UIs for the NHS, my focus is identical: write clean,
-            scalable code that eliminates operational bottlenecks.
+            My background in Biomedical Engineering wired me for analytical
+            rigor; my software career taught me how to ship it. From
+            architecting GDPR-compliant financial systems to building
+            clinical UIs for the NHS and prototyping health-tech with FAANG
+            teams, I build applications that cannot afford to fail.
           </p>
           <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
-            I specialise in bridging the gap between complex business logic and
-            intuitive user experience. I don't just clear tickets; I partner
-            directly with end-users to build secure, highly accessible, and
-            performant web applications that deliver immediate business value.
+            As a mid-level engineer, my value goes beyond writing syntax. I
+            don't just clear tickets; I partner directly with stakeholders to
+            translate complex regulatory and business requirements into secure,
+            highly accessible, and performant software that eliminates
+            operational bottlenecks.
           </p>
         </section>
 
@@ -250,7 +250,7 @@ export default function Portfolio() {
               </div>
 
               <h4 className="text-lg font-bold text-slate-900 dark:text-slate-100">
-                Software Engineer
+                Mid-Level Developer
               </h4>
               <h5 className="text-sm font-medium text-blue-600 dark:text-blue-400 mb-3">
                 Hymans Robertson
@@ -260,7 +260,7 @@ export default function Portfolio() {
                 verification systems within the corporate financial sector.
                 Enforced strict GDPR compliance and WCAG accessibility
                 standards. Spearheaded Kaizen process improvements that
-                successfully modernized legacy pipelines, implemented site
+                successfully modernised legacy pipelines, implemented site
                 analytics, and drastically reduced deployment bugs.
               </p>
             </div>
@@ -278,7 +278,7 @@ export default function Portfolio() {
                 businesses and built proprietary SaaS inventory applications to
                 replace their legacy management. Delivered high-visibility,
                 brand-centric web solutions for high-profile clients, including
-                an MTV Top 10 musician.
+                an MTV Top 10 music artist.
               </p>
             </div>
 
@@ -293,9 +293,8 @@ export default function Portfolio() {
               <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                 Transitioned from an intern to a full-time engineer at a leading
                 medical ultrasound startup. Developed proprietary frontend
-                interfaces and collaborated directly with top-tier technology
-                partners, including Meta and Google, to deliver advanced health
-                tech solutions.
+                interfaces and collaborated directly with FAANG technology
+                partners, to deliver advanced health tech solutions.
               </p>
             </div>
 

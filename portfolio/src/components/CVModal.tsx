@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, Variants } from "framer-motion";
 import { X, Download, FileText, CheckCircle2 } from "lucide-react";
 
 interface CVModalProps {
@@ -9,7 +9,21 @@ interface CVModalProps {
   onClose: () => void;
 }
 
+const staggerContainer: Variants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: { staggerChildren: 0.1, delayChildren: 0.2 }
+  }
+};
+
+const fadeInUp: Variants = {
+  hidden: { opacity: 0, y: 15 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } }
+};
+
 export function CVModal({ isOpen, onClose }: CVModalProps) {
+  // Lock body scroll when modal is open
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
@@ -49,7 +63,6 @@ export function CVModal({ isOpen, onClose }: CVModalProps) {
             transition={{ type: "spring", duration: 0.5, bounce: 0.3 }}
             className="relative w-full max-w-2xl bg-white dark:bg-slate-900 rounded-2xl shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800 z-10"
           >
-            {/* Header */}
             <div className="flex items-center justify-between p-6 border-b border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/50">
               <div className="flex items-center gap-3">
                 <div className="p-2 bg-blue-100 dark:bg-blue-900/30 rounded-lg text-blue-600 dark:text-blue-400">
@@ -68,37 +81,45 @@ export function CVModal({ isOpen, onClose }: CVModalProps) {
               </button>
             </div>
 
-            <div className="p-6 md:p-8 space-y-6">
-              <div className="space-y-4">
+            <motion.div 
+              variants={staggerContainer}
+              initial="hidden"
+              animate="show"
+              className="p-6 md:p-8 space-y-6"
+            >
+              <motion.div variants={fadeInUp} className="space-y-4">
                 <h4 className="text-sm font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500">Executive Summary</h4>
                 <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
-                  Full Stack Software Engineer with a Master's (Distinction) in Biomedical Engineering. Proven expertise in building highly compliant, complex web applications for corporate finance (Hymans Robertson), the NHS, and top-tier health tech startups collaborating with Meta and Google.
+                  Mid-Level Full-Stack Engineer specialising in React, Node.js, and C#/.NET ecosystems to build secure software for highly regulated HealthTech and FinTech industries. Leveraging a Master's in Biomedical Engineering to bridge the gap between complex compliance requirements and scalable technical execution.
                 </p>
-              </div>
+              </motion.div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="space-y-3">
+                <motion.div variants={fadeInUp} className="space-y-3">
                   <h4 className="text-sm font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500">Core Competencies</h4>
                   <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-300">
-                    <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-emerald-500" /> Complex State Management (Redux)</li>
-                    <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-emerald-500" /> Full Stack Architecture (Next.js/C#)</li>
-                    <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-emerald-500" /> Regulatory Compliance (MHRA/GDPR)</li>
+                    <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-emerald-500" /> 100% GDPR & MHRA Compliance</li>
+                    <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-emerald-500" /> CI/CD</li>
+                    <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-emerald-500" /> Secure RBAC & E2E Encryption</li>
+                    <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-emerald-500" /> WCAG Accessibility Standards</li>
                   </ul>
-                </div>
-                <div className="space-y-3">
-                  <h4 className="text-sm font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500">Tech Stack</h4>
+                </motion.div>
+                
+                <motion.div variants={fadeInUp} className="space-y-3">
+                  <h4 className="text-sm font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500">Technical Arsenal</h4>
                   <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-300">
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-blue-500" /> React, Next.js, TypeScript</li>
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-emerald-500" /> C#, Node.js, PostgreSQL</li>
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-purple-500" /> Azure DevOps, Playwright</li>
+                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-blue-500" /> TypeScript, React, Next.js, Jest</li>
+                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-emerald-500" /> C# (.NET), Node.js, PostgreSQL</li>
+                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-purple-500" /> Azure DevOps, Playwright, Vercel</li>
+                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-orange-500" /> Prisma ORM, GraphQL, WebSockets</li>
                   </ul>
-                </div>
+                </motion.div>
               </div>
-            </div>
+            </motion.div>
 
             <div className="p-6 bg-slate-50 dark:bg-slate-800/50 border-t border-slate-100 dark:border-slate-800 flex justify-end">
               <a 
-                href="/david-muir-cv.pdf" 
+                href="/David-Muir-CV.pdf" 
                 download
                 className="flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-all active:scale-95 shadow-md shadow-blue-600/20"
               >

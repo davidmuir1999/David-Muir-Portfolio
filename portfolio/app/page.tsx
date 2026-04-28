@@ -177,7 +177,7 @@ export default function Portfolio() {
                 playsInline
                 className="w-full h-auto block"
               >
-                <source src="/vital-link-demo.mp4" type="video/mp4" />
+                <source src="/Vital-Link-Demo.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
               <div className="absolute inset-0 bg-slate-900/10 group-hover:bg-transparent transition-colors duration-500 pointer-events-none" />

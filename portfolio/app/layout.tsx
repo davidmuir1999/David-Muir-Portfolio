@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/src/components/ThemeProvider";
+import { AmbientBackground } from "@/src/components/AmbientBackground";
 
 import "./globals.css";
 
@@ -35,6 +36,7 @@ export default function RootLayout({
           enableSystem={false}
           disableTransitionOnChange
         >
+          <AmbientBackground />
           {children}
         </ThemeProvider>
       </body>

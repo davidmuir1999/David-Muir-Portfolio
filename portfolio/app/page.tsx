@@ -68,7 +68,7 @@ export default function Portfolio() {
         className="fixed top-0 left-0 right-0 h-1 bg-blue-600 origin-left z-50"
         style={{ scaleX: scrollYProgress }}
       />
-      <div className="min-h-screen flex flex-col lg:flex-row w-full bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-50 transition-colors duration-300">
+      <div className="min-h-screen flex flex-col lg:flex-row w-full transition-colors duration-300">
         <motion.aside
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}

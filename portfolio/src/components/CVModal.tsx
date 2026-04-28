@@ -90,7 +90,7 @@ export function CVModal({ isOpen, onClose }: CVModalProps) {
               <motion.div variants={fadeInUp} className="space-y-4">
                 <h4 className="text-sm font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500">Executive Summary</h4>
                 <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
-                  Mid-Level Full-Stack Engineer specialising in React, Node.js, and C#/.NET ecosystems to build secure software for highly regulated HealthTech and FinTech industries. Leveraging a Master's in Biomedical Engineering to bridge the gap between complex compliance requirements and scalable technical execution.
+                  Mid-Level Engineer specialising in React, Node.js, and C#/.NET ecosystems to build secure software for highly regulated HealthTech and FinTech industries. Leveraging a Master's in Biomedical Engineering to bridge the gap between complex compliance requirements and scalable technical execution.
                 </p>
               </motion.div>
 
@@ -98,7 +98,7 @@ export function CVModal({ isOpen, onClose }: CVModalProps) {
                 <motion.div variants={fadeInUp} className="space-y-3">
                   <h4 className="text-sm font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500">Core Competencies</h4>
                   <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-300">
-                    <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-emerald-500" /> 100% GDPR & MHRA Compliance</li>
+                    <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-emerald-500" /> GDPR & MHRA Compliance</li>
                     <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-emerald-500" /> CI/CD</li>
                     <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-emerald-500" /> Secure RBAC & E2E Encryption</li>
                     <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-emerald-500" /> WCAG Accessibility Standards</li>

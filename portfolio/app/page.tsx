@@ -1,6 +1,6 @@
 "use client";
 
-import { Mail, FileText, ExternalLink, Code2 } from "lucide-react";
+import { Mail, FileText, ExternalLink, Code2, Key } from "lucide-react";
 import { ReactiveAvatar } from "@/src/components/ReactiveAvatar";
 import { CVModal } from "@/src/components/CVModal";
 import { useState } from "react";
@@ -216,6 +216,30 @@ export default function Portfolio() {
               </li>
             </ul>
 
+            <div className="flex items-start gap-3 p-4 mb-6 rounded-lg bg-blue-50 dark:bg-blue-900/20 border border-blue-100 dark:border-blue-800/50">
+              <div className="mt-0.5 text-blue-600 dark:text-blue-400">
+                <Key size={18} />
+              </div>
+              <div>
+                <p className="text-sm font-semibold text-slate-900 dark:text-slate-100">
+                  Testing the RBAC features?
+                </p>
+                <p className="text-sm text-slate-600 dark:text-slate-400 mt-1 leading-relaxed">
+                  To explore the different dashboards, demo login credentials
+                  for the Triage Nurse, Ward Manager, Clinical Doctor and
+                  Cleaner roles are provided in the{" "}
+                  <a
+                    href="https://github.com/davidmuir1999/Vital-Link-Triage-Project#readme"
+                    target="_blank"
+                    className="font-medium text-blue-600 dark:text-blue-400 hover:underline underline-offset-2"
+                  >
+                    project README
+                  </a>
+                  .
+                </p>
+              </div>
+            </div>
+
             <div className="flex gap-4">
               <a
                 href="https://vitallinkapp.com"
@@ -335,8 +359,12 @@ export default function Portfolio() {
                   ID verification systems within the corporate financial sector.
                   Enforced strict GDPR compliance and WCAG accessibility
                   standards. Spearheaded Kaizen process improvements that
-                  successfully modernised legacy pipelines, implemented site
-                  analytics, and drastically reduced deployment bugs.
+                  successfully identified and reduced process pain points.
+                  Spearheaded Kaizen-driven operational improvements across the
+                  engineering team. Systematically optimized Azure DevOps
+                  workflows, CI/CD pipelines, and cross-team communication,
+                  compounding marginal developer gains into significant
+                  team-wide efficiency.
                 </p>
               </motion.div>
 
@@ -350,7 +378,7 @@ export default function Portfolio() {
                 </h5>
                 <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                   Identified systemic technological gaps in local
-                  brick-and-mortar businesses and built proprietary SaaS
+                  brick and mortar businesses and built proprietary SaaS
                   inventory applications to replace their legacy management.
                   Delivered high-visibility, brand-centric web solutions for
                   high-profile clients, including an MTV Top 10 music artist.
@@ -368,9 +396,9 @@ export default function Portfolio() {
                 <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                   Transitioned from an intern to a full-time engineer at a
                   leading medical ultrasound startup. Developed proprietary
-                  frontend interfaces, mechanical design and collaborated directly with FAANG
-                  technology partners, to deliver advanced health tech
-                  solutions.
+                  frontend interfaces, mechanical design and collaborated
+                  directly with FAANG technology partners, to deliver advanced
+                  health tech solutions.
                 </p>
               </motion.div>
 

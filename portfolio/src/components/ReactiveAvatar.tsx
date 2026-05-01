@@ -22,7 +22,7 @@ export function ReactiveAvatar() {
 
   if (!mounted) {
     return (
-      <div className="h-48 w-48 rounded-full bg-slate-200 dark:bg-slate-800 animate-pulse" />
+      <div className="h-70 w-70 rounded-full bg-slate-200 dark:bg-slate-800 animate-pulse" />
     );
   }
 
@@ -30,19 +30,19 @@ export function ReactiveAvatar() {
 
   return (
     <div className="flex flex-col items-center gap-6">
-      <div className="relative h-48 w-48 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-sm font-medium text-slate-500 transition-colors shadow-inner overflow-hidden border-4 border-slate-100 dark:border-slate-900">
+      <div className="relative h-70 w-70 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-sm font-medium text-slate-500 transition-colors shadow-inner overflow-hidden border-4 border-slate-100 dark:border-slate-900">
         <video
           ref={videoRef}
           key={isLight ? "light" : "dark"}
           muted
           playsInline
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover scale-120"
         >
           <source
             src={
               isLight
-                ? "/person-light-mode-video.mp4"
-                : "/person-dark-mode-video.mp4"
+                ? "/david-light-mode.mp4"
+                : "/david-dark-mode.mp4"
             }
             type="video/mp4"
           />

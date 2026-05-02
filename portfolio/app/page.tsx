@@ -175,6 +175,7 @@ export default function Portfolio() {
                 loop
                 muted
                 playsInline
+                poster="/Vital-Link-Demo-Loading.png"
                 className="w-full h-auto block"
               >
                 <source src="/Vital-Link-Demo.mp4" type="video/mp4" />

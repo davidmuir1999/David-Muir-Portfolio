@@ -36,6 +36,7 @@ export function ReactiveAvatar() {
           key={isLight ? "light" : "dark"}
           muted
           playsInline
+          poster={isLight ? "/david-light-mode-loading.jpg" : "/david-dark-mode-loading.jpg"}
           className="w-full h-full object-cover scale-120"
         >
           <source
